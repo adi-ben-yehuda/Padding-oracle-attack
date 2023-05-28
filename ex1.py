@@ -1,15 +1,12 @@
 from Cryptodome.Cipher import DES
 from Cryptodome.Util.Padding import pad,unpad
 import sys
-import binascii
 
-#E
 def xor(a, b, c):
     res = a ^ b ^ c
     return res.to_bytes(1, 'little')
 
 
-#F
 def oracle(ciphertext, KEY, IV):
     crypter = DES.new(KEY, DES.MODE_CBC, IV)
     plain_text = crypter.decrypt(ciphertext)
@@ -25,10 +22,6 @@ if __name__ == '__main__':
 
     if len(arguments) < 4:
         exit(1)
-
-    # ciphertext = bytes.fromhex("4e301349b6704658fcb5fb7dabf34e206e3e1223b86c1b4e360d69dcac04ac4e")
-    # KEY = bytes("Aalenian".encode())
-    # IV = bytes.fromhex("8487ffc596953c48")
 
     ciphertext = bytes.fromhex(arguments[1])
     KEY = bytes(arguments[2].encode())
@@ -51,7 +44,7 @@ if __name__ == '__main__':
                 x = xor(8-i, bytearray(c)[i], bytearray(IV)[i])
             else:
                 x = xor(8-i, bytearray(c)[i], bytearray(ciphertext)[i+(k-1)*8])
-            block = x+ block
+            block = x + block
 
             mutable_bytes1 = bytearray(c)
             for j in range(i, 8):
