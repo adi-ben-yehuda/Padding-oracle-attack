@@ -1,7 +1,7 @@
 # Padding oracle attack
 
 ## Introduction
-In this project, We will encrypt the "hello world" text and then decrypt it using the padding oracle attack.
+In this project, we will encrypt the "hello world" text and then decrypt it using the padding oracle attack.
 
 ## Table of contents
 * [General Information](#general-information)
@@ -38,5 +38,3 @@ After concatenating all the decoded blocks to our variable, we will remove the p
 
 ## Contact
 Created by @adi-ben-yehuda and @shiragolds1 - feel free to contact us!
-
-
