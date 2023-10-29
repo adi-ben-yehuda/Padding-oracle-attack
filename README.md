@@ -5,7 +5,6 @@ In this project, a script that realizes the padding oracle attack is presented.
 
 ## Table of contents
 * [General Information](#general-information)
-* [Installation](#installation)
 * [Contact](#Contact)
 
 ## General Information
@@ -36,20 +35,6 @@ In this way, we will turn all the bytes into a value that causes Oracle to retur
 Finally we will update c with the changes we found.
 At the end of decoding the block (at the end of each iteration of the outer loop) we will update our decoding and concatenate the decoded block to it.
 After concatenating all the decoded blocks to our variable, we will remove the padding from it and get the desired result.
-
-## Installation
-Before installing this project, you need to install on your computer:
-* Git
-* Node.js
-* React
-* MongoDB
-
-Then open a terminal.
-write the next command:
-```
-npm i react-router-dom
-npx create-react-app yourAppName
-```
 
 ## Contact
 Created by @adi-ben-yehuda and @shiragolds1 - feel free to contact us!
