@@ -1,7 +1,7 @@
 # Padding oracle attack
 
 ## Introduction
-In this project, a script that realizes the padding oracle attack is presented.
+In this project, We will encrypt the "hello world" text and then decrypt it using the padding oracle attack.
 
 ## Table of contents
 * [General Information](#general-information)
